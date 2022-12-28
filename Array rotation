@@ -1,0 +1,32 @@
+public void rrotate(int[]arr) //to rotate an array right
+	{
+		 Scanner s1=new Scanner(System.in);
+		 System.out.print("How many times do u want to rotate right?");
+		 int r=s1.nextInt();
+	 for(int i=0;i<r;i++)
+	 {
+		 int temp=arr[0];
+		 for(int j=0;j<arr.length-1;j++)
+		 {
+		   arr[j]=arr[j+1]; 	 
+		 }
+		 arr[arr.length-1]=temp;
+	 }
+	 System.out.println(Arrays.toString(arr));
+ }
+	public void lrotate(int[]arr)  //to rotate an array left
+	{
+	 Scanner s=new Scanner(System.in);
+	 System.out.print("How many times do u want to rotate left?");
+	 int r=s.nextInt();
+	 for(int i=0;i<r;i++)
+	 {
+		 int temp=arr[arr.length-1];
+		 for(int j=arr.length-1;j>0;j--)
+		 {
+		    arr[j]=arr[j-1];
+		 }
+		 arr[0]=temp;
+	 }
+	 System.out.println(Arrays.toString(arr));
+}
